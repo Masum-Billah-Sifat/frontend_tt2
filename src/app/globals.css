@@ -1,27 +1,96 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 20px;
+}
+.grid {
+  display: grid;
+  gap: 16px;
+}
+.grid2 {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.btn {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+.primary {
+  background: #2563eb;
+  color: white;
+}
+.secondary {
+  background: #334155;
+  color: white;
+}
+.danger {
+  background: #b91c1c;
+  color: white;
+}
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+.small {
+  font-size: 12px;
+  color: #94a3b8;
+}
+.badge {
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #334155;
+}
+.online {
+  background: #14532d;
+}
+.message {
+  padding: 12px;
+  border-radius: 12px;
+  background: #1e293b;
+}
+.mine {
+  background: #1d4ed8;
+}
+.deleted {
+  opacity: 0.7;
+  font-style: italic;
+}
+textarea.input {
+  min-height: 90px;
 }
